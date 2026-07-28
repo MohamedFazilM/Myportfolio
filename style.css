@@ -171,14 +171,15 @@ header {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
   list-style: none;
 }
 
 .nav-menu a {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--text-secondary);
+  transition: color 0.2s ease;
 }
 
 .nav-menu a:hover {
@@ -188,7 +189,60 @@ header {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+}
+
+/* Header Action Buttons Alignment */
+.nav-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.nav-linkedin-link svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-secondary);
+  transition: fill 0.2s ease;
+}
+
+.nav-linkedin-link:hover {
+  border-color: var(--accent) !important;
+  background-color: var(--accent-light) !important;
+}
+
+.nav-linkedin-link:hover svg {
+  fill: var(--accent) !important;
+}
+
+.nav-resume-btn {
+  height: 40px;
+  padding: 0 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-resume-btn:hover {
+  background-color: var(--bg-primary);
+  border-color: var(--border-hover);
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -628,15 +682,6 @@ footer {
   transform: translateY(0);
 }
 
-.nav-linkedin-link:hover {
-  border-color: var(--accent) !important;
-  background-color: var(--accent-light);
-}
-
-.nav-linkedin-link:hover svg {
-  fill: var(--accent) !important;
-}
-
 /* Responsive Overrides & Hamburger Menu styling */
 .hamburger {
   display: none;
@@ -672,7 +717,7 @@ footer {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   section {
     padding: 70px 0;
   }
